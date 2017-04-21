@@ -10,10 +10,22 @@
 
 var fs = require('fs');
 var Promise = require('bluebird');
-
-
+var rp = require('request-promise');
 
 var fetchProfileAndWriteToFile = function(readFilePath, writeFilePath) {
+  fs.readFileAsync(readFilePath)
+    .then(function(fileData) {
+      return fileData[0];
+    })
+    .then(function(user) {
+      rp('www.github.com')
+        .then(function (infoOnUser) {
+          return infoOnUser.profile;
+        })
+    })
+    .then(function (profileInfo) {
+      
+    })
   // TODO
 };
 

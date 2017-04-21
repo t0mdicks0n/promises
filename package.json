@@ -18,8 +18,11 @@
     "chai": "^3.2.0",
     "colors": "^1.1.2",
     "eslint-config-hackreactor": "git://github.com/hackreactor-labs/eslint-config-hackreactor",
+    "install": "^0.8.8",
     "mocha": "^2.2.5",
     "nock": "^2.15.0",
-    "request": "^2.61.0"
+    "npm": "^4.5.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0"
   }
 }
